@@ -1,0 +1,118 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ #content {
+  text-align: center;
+ }
+
+div.key.true {
+  background-color: tomato;
+}
+
+.keyboard {
+  position: relative;
+}
+
+.key {
+  display: inline-block;
+  position: relative;
+  height: 150px;
+  width: 30px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  text-align: center;
+  z-index: -1;
+  p {
+    transform: translateY(100px);
+  }
+}
+
+.black {
+  color: white;
+  background-color: black;
+  height: 80px;
+  margin-left: -15px;
+  margin-right: -15px;
+  z-index: 1;
+  p {
+    transform: translateY(60px);
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.btn {
+  width: 100px;
+}
+
+.recordings {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    li {
+      transition-duration: 300ms;
+      &:hover {
+        background-color: #f0ad4e;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.save-modal {
+  transition-duration: 1000ms;
+  position: fixed;
+  z-index: 200;
+  padding: 10px;
+  width: 300px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  left: 0%;
+  top: 50%;
+  margin-left: -350px;
+  margin-top: -70px;
+  box-shadow: 0 0 5px 0 gray;
+}
+
+div.save-modal.active {
+  left: 50%;
+  margin-left: -150px;
+  transition-duration: 300ms;
+}
+
+.recording-index-item {
+  font-weight: bold;
+  em {
+    font-weight: normal;
+    color: gray;
+  }
+}
+
+body {
+  font-family: "Varela Round", Ubuntu, Helvetica;
+}
